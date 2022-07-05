@@ -1,0 +1,2 @@
+'inherutance in Python '
+
