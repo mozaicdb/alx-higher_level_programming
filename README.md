@@ -1,4 +1,4 @@
-0x00. Python - Hello, World By Guillaume Weight: 1 Ongoing project - started May 30, 2022, must end by May 31, 2022 - you're done with 0% of tasks. Checker will be released at May 30, 2022 12:00 PM An auto review will be launched at the deadline Concepts For this project, we are expected you to look at this concept:
+0x00. Python - Hello, World By Guillaume Weight: 1 Ongoing project - started october 1st, 2023, must end by Novemebr 18, 2023 - you're done with 0% of tasks. Checker will be released at october 2nd, 2023 1:00 AM An auto review will be launched at the deadline Concepts For this project, we are expected you to look at this concept:
 
 Python programming
 
@@ -147,8 +147,6 @@ current = head; for (i = 0; i < 4; i++) current = current->next; temp = current-
 
 if (check_cycle(head) == 0) printf("Linked list has no cycle\n"); else if (check_cycle(head) == 1) printf("Linked list has a cycle\n");
 
-current = head; for (i = 0; i < 4; i++) current = current->next; current->next = temp;
-
-free_listint(head);
+current = head; for (i = 0; i < 4; i++) current = current->next; current->next = this task is done october 25
 
 return (0); } carrie@ubuntu:/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 10-main.c 10-check_cycle.c 10-linked_lists.c -o cycle carrie@ubuntu:/0x00$$ ./cycle 1024 402 98 4 3 2 1 0 Linked list has no cycle Linked list has a cycle carrie@ubuntu:~/0x00$`
