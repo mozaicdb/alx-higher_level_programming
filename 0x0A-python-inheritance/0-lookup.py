@@ -1,6 +1,16 @@
 #!/usr/bin/python3
-"""Thid defines an object atrribute lookup function"""
+
+"""Looks up the list of available attributes
+and methods
+"""
+
 
 def lookup(obj):
-    """This function return a lidt of an object available attributes """
+    """Returns the list of available attributes
+        and methods
+        Args:
+            obj (object): The object to look up
+        Returns:
+            A list object
+    """
     return (dir(obj))
