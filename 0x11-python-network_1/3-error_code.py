@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-from sys import argv
-from urllib.request import Request, urlopen
-from urllib.parse import urlencode
-from urllib.error import HTTPError
+"""
+Sends a request to the URL and displays the body of the response
+(decoded in utf-8).
+"""
 
 
-if __name__ == "__main__":
-    req = Request(argv[1])
+if __name__ == '__main__':
+    import sys
+    from urllib import request, error
 
+    argv = sys.argv
+    url = argv[1]
     try:
-        with urlopen(req) as res:
-            print(res.read().decode('utf-8'))
-    except HTTPError as ex:
-        print('Error code:', ex.code)
+        with request.urlopen(url) as response:
+            print(response.read().decode('utf-8'))
+    except error.HTTPError as err:
+        print("Error code: {}".format(err.status))

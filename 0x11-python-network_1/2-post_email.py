@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-from sys import argv
-from urllib.request import Request, urlopen
-from urllib.parse import urlencode
+"""
+Sends a POST request to the passed URL with the email as a parameter,
+and displays the body of the response (decoded in utf-8)
+"""
 
+if __name__ == '__main__':
+    import urllib.request
+    import urllib.parse
+    import sys
 
-if __name__ == "__main__":
+    argv = sys.argv
     url = argv[1]
-    values = {'email': argv[2]}
+    email = argv[2]
+    DATA = urllib.parse.urlencode({"email": email})
+    DATA = DATA.encode('ascii')
 
-    data = urlencode(values)
-    data = data.encode('ascii')
-    req = Request(url, data)
-    with urlopen(req) as res:
-        content = res.read().decode('utf-8')
-        print(content)
+    with urllib.request.urlopen(url, DATA) as response:
+        print(response.read().decode('utf-8'))

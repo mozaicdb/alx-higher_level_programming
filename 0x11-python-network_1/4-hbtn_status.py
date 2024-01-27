@@ -1,15 +1,11 @@
 #!/usr/bin/python3
-"""Takes in a URL, sends a request to the URL and"""
+"""
+Python script that fetches an URL with requests package
+"""
 import requests
 
 
-def getStatus():
-    req = requests.get('https://alx-intranet.hbtn.io/status')
-    content = req.text
-
-    print("Body response:")
-    print("\t- type: {}".format(type(content)))
-    print("\t- content: {}".format(content))
-
 if __name__ == "__main__":
-    getStatus()
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    t = r.text
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
